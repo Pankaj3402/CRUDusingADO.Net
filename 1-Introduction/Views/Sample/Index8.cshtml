@@ -1,0 +1,21 @@
+﻿@* @using _1_Introduction.helper *@
+<h1 highlite>Login Form using HTML helper class method</h1>
+
+<table>
+    <tr>
+        <td>Username:</td>
+        <td>@Html.TextBox("email")</td>
+    </tr>
+    <tr>
+        <td>Password:</td>
+        <td>@Html.Password("password")</td>
+    </tr>
+    <tr>
+        @* <td colspan="2"><input type="submit" value="Login" class="btn btn-primary" /></td> *@
+
+        @Html.Button("submit","Log In","btn btn-primary")
+    </tr>
+    <tr>
+        @Html.ActionLink("Index 7", "Index7", "Sample")")
+    </tr>
+</table>

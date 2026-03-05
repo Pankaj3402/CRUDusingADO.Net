@@ -1,0 +1,21 @@
+﻿@* @{
+    Layout = null;
+} *@
+
+<h1>pankaj more</h1>
+
+<form>
+    Name: <input /> <br />
+    Email : <input /> <br />
+    <input  type="button" value="click me!!"/>
+</form>
+
+@{
+    string[] names = new string[] { "pankaj", "pranali", "abhi" };
+    <ul>
+    @foreach(string name in names)
+        {
+            <li>@name</li>
+        }
+    </ul>
+}

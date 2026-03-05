@@ -1,0 +1,31 @@
+﻿@model List<_1_Introduction.Models.Category>
+
+    <h2>All Categories</h2>
+
+    <partial name="_PartialView1"></partial>
+
+@await Component.InvokeAsync("Categories")
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Owner</th>
+                <th>Action</th>
+        </tr>
+        </thead>
+
+        <tbody>
+            @foreach (Category category in Model)
+            {
+                <tr>
+                    <td>@category.Id</td>
+                    <td>@category.Name</td>
+                    <td>@category.Owner</td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@category.Id">Details</a>
+                    </td>
+                </tr>
+        }
+    </table>
